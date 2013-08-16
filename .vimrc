@@ -50,7 +50,8 @@ let g:rspec_command = "Dispatch zeus rspec {spec}"
 let &background = "dark"
 "hi Comment ctermfg=Blue
 "lang messages en_US.UTF-8
-set tabstop=2
+
+"set nu
 
 "disable syntax for really large files
 syntax on
@@ -58,15 +59,24 @@ syntax enable
 set bs=2
 set ruler
 set showcmd
+set showmode
+set wildmenu
 filetype plugin on
 filetype plugin indent on
 set incsearch
 set autoindent
+
 autocmd FileType text setlocal textwidth=78
+
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
 set expandtab
 set smartindent
+set showmatch
+set ignorecase
+set smartcase
 set pastetoggle=<F6>
 let javaScript_fold=1
 let perl_fold=1
@@ -100,18 +110,24 @@ set t_ti= t_te=
 "set statusline+=%{rvm#statusline()} 
 "set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\ %l,%c-%v\ %)%P 
 
-:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 execute pathogen#infect()
+
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
+    " Do the business:
     %s/\s\+$//e
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,shell,bash autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-let g:ackprg = 'ag --nogroup --nocolor --column'
+
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+set showbreak=…
