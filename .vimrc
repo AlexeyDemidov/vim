@@ -8,7 +8,6 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'sjl/gundo.vim'
 Bundle 'timcharper/textile.vim'
@@ -32,7 +31,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tsaleh/vim-matchit'
 
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 
 " Bundle 'git://git.wincent.com/command-t.git'
 
