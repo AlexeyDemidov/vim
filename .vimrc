@@ -29,6 +29,7 @@ Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'ngmy/vim-rubocop'
 
 Bundle 'L9'
 
@@ -123,9 +124,18 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,shell,bash autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,shell,bash,haml autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 set showbreak=…
+
+set wildignore+=coverage/**
+set wildignore+=tmp/metric_fu/**
+set wildignore+=tmp/mail_queue/**
+set wildignore+=tmp/miniprofiler/**
+set wildignore+=tmp/cache/**
+set wildignore+=public/custom_store/**
+set wildignore+=public/campaigns/**
+set wildignore+=*.gif,*.png,*.jpg,*.jpeg,*.swf,*.gz,*.zip
