@@ -139,3 +139,8 @@ set wildignore+=tmp/cache/**
 set wildignore+=public/custom_store/**
 set wildignore+=public/campaigns/**
 set wildignore+=*.gif,*.png,*.jpg,*.jpeg,*.swf,*.gz,*.zip
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
