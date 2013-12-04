@@ -12,11 +12,11 @@ ECHO = $(ECHO1:0=@echo)
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1
-hdrdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1
-arch_hdrdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/$(arch)
+topdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p484/include/ruby-1.9.1
+hdrdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p484/include/ruby-1.9.1
+arch_hdrdir = /home/alexd/.rvm/rubies/ruby-1.9.3-p484/include/ruby-1.9.1/$(arch)
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/alexd/.rvm/rubies/ruby-1.9.3-p448
+prefix = $(DESTDIR)/home/alexd/.rvm/rubies/ruby-1.9.3-p484
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
 exec_prefix = $(prefix)
 vendorhdrdir = $(rubyhdrdir)/vendor_ruby

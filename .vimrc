@@ -146,3 +146,6 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+let g:syntastic_ruby_checkers=['rubocop']
+let g:syntastic_quiet_warnings=0
